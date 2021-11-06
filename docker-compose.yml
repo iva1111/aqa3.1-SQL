@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  mysql-container:
+    image: postgres:12-alpine
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresq
+    environment:
+      - POSTGRES_USER=vera
+      - POSTGRES_PASSWORD=123v
+      - POSTGRES_DB=postgresql
